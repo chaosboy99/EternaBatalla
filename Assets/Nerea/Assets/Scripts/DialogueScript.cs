@@ -2,15 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class DialogueScript : MonoBehaviour
 {
 
     public TextMeshProUGUI dialogueText;
 
+    public GameObject NomPersonatgeEs, NomPersonatgeDret;
+
     public string[] lines;
 
-    public float textSpeed = 0.1f;
+    public float vel_texto = 0.1f;
 
     int index;
 
@@ -48,11 +52,41 @@ public class DialogueScript : MonoBehaviour
 
     IEnumerator WriteLine()
     {
+        string[] PersonatgeText = lines[index].Split("/");
+
+        Debug.Log(PersonatgeText[0]);
+
+        if ("T" == PersonatgeText[0])
+        {
+
+            // Cartell dret
+            NomPersonatgeDret.SetActive(true);
+            NomPersonatgeEs.SetActive(false);
+
+        }
+        else if ("M" == PersonatgeText[0])
+        {
+
+            // Cartell Es
+            NomPersonatgeEs.SetActive(true);
+            NomPersonatgeDret.SetActive(false);
+
+        }
+        else if ("D" == PersonatgeText[0])
+        {
+
+            // Sense Cartells
+            NomPersonatgeDret.SetActive(false);
+            NomPersonatgeEs.SetActive(false);
+
+        }
+
+
         foreach (char  letter in lines[index].ToCharArray())
         {
             dialogueText.text += letter;
 
-            yield return new WaitForSeconds(textSpeed);
+            yield return new WaitForSeconds(vel_texto);
         }
     }
 
@@ -67,8 +101,9 @@ public class DialogueScript : MonoBehaviour
         
         else
         {
-
+            //Aquí se cierra el dialogo, por lo tanto aquí irá relacionado con la siguiente pantalla.
             gameObject.SetActive(false);
+            SceneManager.LoadScene("SceneShool.Cap1");
 
         }
     }

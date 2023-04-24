@@ -783,25 +783,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 1670728960}
+  NomPersonatgeEs: {fileID: 891908420}
+  NomPersonatgeDret: {fileID: 217198275}
   lines:
-  - "Todo inicia cuando llegas a Barcelona debido a que tus padres encontraron nuevos
-    trabajos que ayudar\xE1n a mejorar vuestras vidas, pero sin saber que la tuya
-    se perjudicar\xEDa por completo."
-  - "Por culpa de la mudanza dejas todo atr\xE1s, la escuela, amigos, familia, tu
-    casa de la infancia, todo\u2026                                                                        
+  - "D/Todo inicia cuando llegas a Barcelona debido a que tus padres encontraron
+    nuevos trabajos que ayudar\xE1n a mejorar vuestras vidas, pero sin saber que
+    la tuya se perjudicar\xEDa por completo."
+  - "D/Por culpa de la mudanza dejas todo atr\xE1s, la escuela, amigos, familia,
+    tu casa de la infancia, todo\u2026                                                                        
     Ahora toca enfrentarte al miedo e inseguridades de tu nueva vida, nuevo c\xEDrculo
     social, intentar caer bien a todos, ser aceptado y adaptarte a todo lo nuevo. "
-  - "Est\xE1s estudiando cuando tu madre te llama:                                 
-    Madre:   Ya es hora de ir a clases, se te va hacer tarde en tu primer d\xEDa
-    de clase."
-  - "Personaje:   Ya voy mam\xE1. Dejas los libros y bajas a desayunar con tu madre. "
-  - "Personaje:   Mam\xE1 estoy nerviosa y tengo miedo de no llevarme bien con mis
-    compa\xF1eros.                                 \t                      \tMadre:
-    Tranquila hija no va a pasar nada, tu se tu misma y ya ver\xE1s como har\xE1s
+  - "D/Est\xE1s estudiando cuando tu madre te llama:"
+  - "M/Ya es hora de ir a clases, se te va hacer tarde en tu primer d\xEDa de clase."
+  - "T/Ya voy mam\xE1."
+  - 'D/Dejas los libros y bajas a desayunar con tu madre. '
+  - "T/Mam\xE1 estoy nerviosa y tengo miedo de no llevarme bien con mis compa\xF1eros."
+  - "M/Tranquila hija no va a pasar nada, se t\xFA misma y ya ver\xE1s como har\xE1s
     amigos, eres genial, nuncaq lo dudes cari\xF1o."
-  - "Personaje: Gracias mam\xE1.                                                                                                
-    Acabas de comer y te pones en marcha de camino a clases. "
-  textSpeed: 0.02
+  - "T/Gracias mam\xE1."
+  - 'D/Acabas de comer y te pones en marcha de camino a clases. '
+  vel_texto: 0.1
 --- !u!1 &891908420
 GameObject:
   m_ObjectHideFlags: 0
@@ -1708,7 +1709,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Mama
+  m_text: Madre
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
