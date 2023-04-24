@@ -6,12 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Damian/Scene/MainMenu.unity
-    guid: c0d44f260c53c9c49b6870ef839cd165
-  - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 968df637967194b4ea11b9d03d7facf6
-  - enabled: 1
     path: Assets/wacho/escenas/Mapa1.unity
     guid: 60a73fef697e49248bba3e6a142ef6e4
   - enabled: 1
