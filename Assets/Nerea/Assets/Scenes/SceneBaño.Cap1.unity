@@ -423,7 +423,7 @@ GameObject:
   - component: {fileID: 396663767}
   - component: {fileID: 396663770}
   - component: {fileID: 396663769}
-  - component: {fileID: 396663768}
+  - component: {fileID: 396663771}
   m_Layer: 5
   m_Name: DialoguePanel
   m_TagString: Untagged
@@ -452,42 +452,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0.099998474, y: -0}
   m_SizeDelta: {x: 680, y: 60.38672}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &396663768
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 396663766}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb2feaac9443fb84eb673cc886a644b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueText: {fileID: 101761384}
-  NomPersonatgeEs: {fileID: 323004465}
-  NomPersonatgeDret: {fileID: 1381617359}
-  lines:
-  - "D/Cuando entras al ba\xF1o ves a un grupo de chicas hablando, ves un ba\xF1o
-    vac\xEDo as\xED que preguntas si alguna va entrar. Entonces todas se giran a
-    verte."
-  - "C/\xA1Anda! Pero mirar qui\xE9n \xE9s!"
-  - "D/Te da un escalofr\xEDo en todo el cuerpo, reconoces al instante esa voz. Instintivamente
-    te giras para irte de all\xED. Pero una de las chicas se pone delante tuya."
-  - "C/Hola rarita a donde te crees que vas? No quer\xEDas ir al ba\xF1o?"
-  - "D/En ese momento le hace un gesto a una de las chicas se\xF1alando la puerta
-    y ella cierra la puerta. Te empiezas a asustar, no sabes como reaccionar as\xED
-    que no respondes, solo sabes decir una cosa en voz baja."
-  - T/Dejadme salir...
-  - C/No! Dime tu Instagram para reirme un rato y me lo pienso.
-  - "D/Mientras que todas se r\xEDen, intentas no entrar en panico y calmarte, no
-    saber que decir ni que hacer."
-  - "C/\xA1Que no sabes hablar o que?!"
-  - "D/En ese momento recuerdas que hay un ba\xF1o vac\xEDo y sales corriendo, te
-    metes dentro y cierras con pestillo. Las chicas salen corriendo detr\xE1s tuya."
-  - "C/\xA1\xA1\xA1Sal de ah\xED!!! Bueno haz lo que quieras, hasta que no me respondas
-    no saldr\xE1s de aqu\xED!"
-  vel_texto: 0.1
 --- !u!114 &396663769
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -526,6 +490,42 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 396663766}
   m_CullTransparentMesh: 1
+--- !u!114 &396663771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 396663766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb2feaac9443fb84eb673cc886a644b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueText: {fileID: 101761384}
+  NomPersonatgeEs: {fileID: 323004465}
+  NomPersonatgeDret: {fileID: 1381617359}
+  lines:
+  - "D/Cuando entras al ba\xF1o ves a un grupo de chicas hablando, ves un ba\xF1o
+    vac\xEDo as\xED que preguntas si alguna va entrar. Entonces todas se giran a
+    verte."
+  - "C/\xA1Anda! Pero mirar qui\xE9n \xE9s!"
+  - "D/Te da un escalofr\xEDo en todo el cuerpo, reconoces al instante esa voz. Instintivamente
+    te giras para irte de all\xED. Pero una de las chicas se pone delante tuya."
+  - "C/Hola rarita a donde te crees que vas? No quer\xEDas ir al ba\xF1o?"
+  - "D/En ese momento le hace un gesto a una de las chicas se\xF1alando la puerta
+    y ella cierra la puerta. Te empiezas a asustar, no sabes como reaccionar as\xED
+    que no respondes, solo sabes decir una cosa en voz baja."
+  - T/Dejadme salir...
+  - C/No! Dime tu Instagram para reirme un rato y me lo pienso.
+  - "D/Mientras que todas se r\xEDen, intentas no entrar en panico y calmarte, no
+    saber que decir ni que hacer."
+  - "C/\xA1Que no sabes hablar o que?!"
+  - "D/En ese momento recuerdas que hay un ba\xF1o vac\xEDo y sales corriendo, te
+    metes dentro y cierras con pestillo. Las chicas salen corriendo detr\xE1s tuya."
+  - "C/\xA1\xA1\xA1Sal de ah\xED!!! Bueno haz lo que quieras, hasta que no me respondas
+    no saldr\xE1s de aqu\xED!"
+  vel_texto: 0.1
 --- !u!1 &546444120
 GameObject:
   m_ObjectHideFlags: 0

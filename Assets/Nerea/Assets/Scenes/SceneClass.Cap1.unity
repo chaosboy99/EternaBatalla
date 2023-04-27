@@ -1466,7 +1466,7 @@ GameObject:
   - component: {fileID: 1807447921}
   - component: {fileID: 1807447924}
   - component: {fileID: 1807447923}
-  - component: {fileID: 1807447922}
+  - component: {fileID: 1807447925}
   m_Layer: 5
   m_Name: DialoguePanel
   m_TagString: Untagged
@@ -1495,40 +1495,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0.099998474, y: -0}
   m_SizeDelta: {x: 680, y: 60.38672}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1807447922
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1807447920}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb2feaac9443fb84eb673cc886a644b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueText: {fileID: 1055982166}
-  NomPersonatgeEs: {fileID: 491407907}
-  NomPersonatgeDret: {fileID: 406773074}
-  lines:
-  - D/Una vez dentro el profesor te pide que te acerques, cuando te pones a su lado
-    te saluda y se gira dirigiendose a la clase.
-  - "P/Buno chicos quiero que le deis un gran recivimiento a nuestra nueva compa\xF1era.
-    Por favor sientate en el asiento vac\xEDo de enmedio.."
-  - D/Le das las gracias al profesor y vas a sentarte, cuando escuchas risas y a
-    alguien que dice "mira a la nueva, es un bicho raro!", escuchas otra voz que
-    dice entre risas "mira que fea, seguro que la echaron del otro instituto por
-    eso".
-  - "D/Te sientas e intentas prestar atenci\xF3n a la clase que est\xE1 por empezar,
-    pero es imposible con las risas y comntarios de tus nuevas compa\xF1eras que
-    no hacen m\xE1s que ponerte nerviosa e intranquila."
-  - "P/Bueno, empecemos con la clase de matematicas, abran el libro por la p\xE1gina
-    25."
-  - "D/Despu\xE9s de 3 horas de clases por fin es la hora del descanco, no puedes
-    parar de pensar en salir ya para sentirte m\xE1s segura."
-  - "D/Coges tu merienda y empiezas a salir de clase, una vez en el patio decides
-    ir un momento al ba\xF1o."
-  vel_texto: 0.1
 --- !u!114 &1807447923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1567,6 +1533,40 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1807447920}
   m_CullTransparentMesh: 1
+--- !u!114 &1807447925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1807447920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68ed5f58fb4d0564989907f2bda7c756, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueText: {fileID: 1055982166}
+  NomPersonatgeEs: {fileID: 491407907}
+  NomPersonatgeDret: {fileID: 406773074}
+  lines:
+  - D/Una vez dentro el profesor te pide que te acerques, cuando te pones a su lado
+    te saluda y se gira dirigiendose a la clase.
+  - "P/Buno chicos quiero que le deis un gran recivimiento a nuestra nueva compa\xF1era.
+    Por favor sientate en el asiento vac\xEDo de enmedio.."
+  - D/Le das las gracias al profesor y vas a sentarte, cuando escuchas risas y a
+    alguien que dice "mira a la nueva, es un bicho raro!", escuchas otra voz que
+    dice entre risas "mira que fea, seguro que la echaron del otro instituto por
+    eso".
+  - "D/Te sientas e intentas prestar atenci\xF3n a la clase que est\xE1 por empezar,
+    pero es imposible con las risas y comntarios de tus nuevas compa\xF1eras que
+    no hacen m\xE1s que ponerte nerviosa e intranquila."
+  - "P/Bueno, empecemos con la clase de matematicas, abran el libro por la p\xE1gina
+    25."
+  - "D/Despu\xE9s de 3 horas de clases por fin es la hora del descanco, no puedes
+    parar de pensar en salir ya para sentirte m\xE1s segura."
+  - "D/Coges tu merienda y empiezas a salir de clase, una vez en el patio decides
+    ir un momento al ba\xF1o."
+  vel_texto: 0.1
 --- !u!1 &1972728034
 GameObject:
   m_ObjectHideFlags: 0
