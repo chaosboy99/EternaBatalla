@@ -5,12 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class sceneTransution : MonoBehaviour
 {
-    public string sceneToLoad;
-    public void OnTriggerEnter2D(Collider2D collision)
+    public void OnTriggerEnter(Collider collision)
     {
-        if(collision.CompareTag("Player") && !collision.isTrigger)
-        {
-            SceneManager.LoadScene(sceneToLoad);
-        }
+        SceneManager.LoadScene(0);
     }
 }
