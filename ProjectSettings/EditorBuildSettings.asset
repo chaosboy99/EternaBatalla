@@ -6,11 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/wacho/escenas/Mapa1.unity
-    guid: 60a73fef697e49248bba3e6a142ef6e4
-  - enabled: 1
-    path: Assets/wacho/escenas/GameOver.unity
-    guid: 8ba7eb4a7bb364345adc775caa15b1ab
+    path: Assets/Damian/Scene/MainMenu.unity
+    guid: c0d44f260c53c9c49b6870ef839cd165
   - enabled: 1
     path: Assets/Nerea/Assets/Scenes/SceneRoom.Cap1.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
@@ -26,4 +23,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 968df637967194b4ea11b9d03d7facf6
+  - enabled: 1
+    path: Assets/wacho/escenas/Mapa1.unity
+    guid: 60a73fef697e49248bba3e6a142ef6e4
+  - enabled: 1
+    path: Assets/wacho/escenas/GameOver.unity
+    guid: 8ba7eb4a7bb364345adc775caa15b1ab
   m_configObjects: {}
