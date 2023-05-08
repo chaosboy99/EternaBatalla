@@ -81,6 +81,7 @@ public class DialogueBañoCap1 : MonoBehaviour
 
         }
 
+        lines[index] = PersonatgeText[1];
 
         foreach (char letter in lines[index].ToCharArray())
         {
@@ -103,7 +104,7 @@ public class DialogueBañoCap1 : MonoBehaviour
         {
             //Aquí se cierra el dialogo, por lo tanto aquí irá relacionado con la siguiente pantalla.
             gameObject.SetActive(false);
-            SceneManager.LoadScene("SampleScene");
+            SceneManager.LoadScene(5);
 
         }
     }

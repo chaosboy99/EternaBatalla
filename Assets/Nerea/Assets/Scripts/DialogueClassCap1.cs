@@ -81,6 +81,7 @@ public class DialogueClassCap1 : MonoBehaviour
 
         }
 
+        lines[index] = PersonatgeText[1];
 
         foreach (char letter in lines[index].ToCharArray())
         {
