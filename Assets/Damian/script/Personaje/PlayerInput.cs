@@ -13,19 +13,29 @@ public class PlayerInput : MonoBehaviour
     IEnumerator sitCort; // Enumerator para la animación de sentarse
     public bool isSitting; // Booleano para saber si el jugador está sentado
 
+    // Componente Animator del personaje
+    private Animator animPersonaje;
+    void Start()
+    {
+        animPersonaje = GetComponent<Animator>();
+    }
+
     void Update()
     {
         // Verifica si el personaje está en el suelo
         if (physicalCC.isGround)
         {
             // Establece la entrada del movimiento en función de las teclas de dirección y la velocidad
-            physicalCC.moveInput = Vector3.ClampMagnitude(transform.forward
-                            * Input.GetAxis("Vertical")
-                            + transform.right
-                            * Input.GetAxis("Horizontal"), 1f) * speed;
+            float x = Input.GetAxisRaw("Horizontal");
+            float y = Input.GetAxisRaw("Vertical");
+            physicalCC.moveInput = Vector3.ClampMagnitude(transform.forward * y + transform.right * x, 1f) * speed;
+            Debug.Log("X:" + x +" Y:"+y);
+            // Establece las variables de velocidad en el componente Animator
+            animPersonaje.SetFloat("velocidadX", x);
+            animPersonaje.SetFloat("velocidadY", y);
 
             // Verifica si el jugador presiona la tecla Espacio para saltar
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 physicalCC.inertiaVelocity.y = 0f; // Resetea la velocidad de inercia vertical
                 physicalCC.inertiaVelocity.y += jumpHeight; // Agrega la altura del salto a la velocidad de inercia vertical
@@ -39,7 +49,7 @@ public class PlayerInput : MonoBehaviour
                 StartCoroutine(sitCort);
             }
             // Verifica si el jugador presiona el clic derecho para atacar
-            if (Input.GetMouseButtonDown(1))
+            if (Input.GetKeyDown(KeyCode.Space))
             {
                 Attack();
             }
@@ -91,30 +101,10 @@ public class PlayerInput : MonoBehaviour
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, 2f);
         foreach (var hitCollider in hitColliders)
         {
-            if (hitCollider.CompareTag("Enemy"))
+            if (hitCollider.CompareTag("Enemigo"))
             {
-                // Reducción de salud del enemigo
-                Enemigo enemyHealth = hitCollider.GetComponent<Enemigo>();
-                if (enemyHealth != null)
-                {
-                    enemyHealth.TakeDamage(5);
-                }
-
-                // Ejecuta animación de ataque en el jugador y enemigo
-                Animator animator = GetComponent<Animator>();
-                if (animator != null)
-                {
-                    animator.SetTrigger("Attack");
-                    Debug.Log("Ataque1");
-                }
-
-                Animator enemyAnimator = hitCollider.GetComponent<Animator>();
-                if (enemyAnimator != null)
-                {
-                    enemyAnimator.SetTrigger("Hit");
-                    Debug.Log("Ataque2");
-
-                }
+                animPersonaje.SetTrigger("ataque");
+                Debug.Log("Ataque1");
             }
         }
     }
