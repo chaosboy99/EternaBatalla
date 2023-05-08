@@ -38,11 +38,6 @@ public class PlayerInput : MonoBehaviour
                 sitCort = sitDown();
                 StartCoroutine(sitCort);
             }
-            // Verifica si el jugador presiona el clic derecho para atacar
-            if (Input.GetMouseButtonDown(1))
-            {
-                Attack();
-            }
         }
     }
 
@@ -83,39 +78,6 @@ public class PlayerInput : MonoBehaviour
         // Resetea el enumerator de la animación
         sitCort = null;
         yield break;
-    }
-    // Función de ataque
-    void Attack()
-    {
-        // Busca el objeto enemigo
-        Collider[] hitColliders = Physics.OverlapSphere(transform.position, 2f);
-        foreach (var hitCollider in hitColliders)
-        {
-            if (hitCollider.CompareTag("Enemy"))
-            {
-                // Reducción de salud del enemigo
-                Enemigo enemyHealth = hitCollider.GetComponent<Enemigo>();
-                if (enemyHealth != null)
-                {
-                    enemyHealth.TakeDamage(5);
-                }
-
-                // Ejecuta animación de ataque en el jugador y enemigo
-                Animator animator = GetComponent<Animator>();
-                if (animator != null)
-                {
-                    animator.SetTrigger("Attack");
-                    Debug.Log("Ataque1");
-                }
-
-                Animator enemyAnimator = hitCollider.GetComponent<Animator>();
-                if (enemyAnimator != null)
-                {
-                    enemyAnimator.SetTrigger("Hit");
-                    Debug.Log("Ataque2");
-
-                }
-            }
-        }
+    
     }
 }
