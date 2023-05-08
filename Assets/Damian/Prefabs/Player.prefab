@@ -395,7 +395,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  jumpHeight: 15
+  jumpHeight: 5
   physicalCC: {fileID: 5037619874638700615}
   bodyRender: {fileID: 5037619873960763013}
   isSitting: 0
@@ -419,6 +419,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8089629762346140466
 GameObject:
   m_ObjectHideFlags: 0
