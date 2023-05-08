@@ -13,29 +13,19 @@ public class PlayerInput : MonoBehaviour
     IEnumerator sitCort; // Enumerator para la animación de sentarse
     public bool isSitting; // Booleano para saber si el jugador está sentado
 
-    // Componente Animator del personaje
-    private Animator animPersonaje;
-    void Start()
-    {
-        animPersonaje = GetComponent<Animator>();
-    }
-
     void Update()
     {
         // Verifica si el personaje está en el suelo
         if (physicalCC.isGround)
         {
             // Establece la entrada del movimiento en función de las teclas de dirección y la velocidad
-            float x = Input.GetAxisRaw("Horizontal");
-            float y = Input.GetAxisRaw("Vertical");
-            physicalCC.moveInput = Vector3.ClampMagnitude(transform.forward * y + transform.right * x, 1f) * speed;
-            Debug.Log("X:" + x +" Y:"+y);
-            // Establece las variables de velocidad en el componente Animator
-            animPersonaje.SetFloat("velocidadX", x);
-            animPersonaje.SetFloat("velocidadY", y);
+            physicalCC.moveInput = Vector3.ClampMagnitude(transform.forward
+                            * Input.GetAxis("Vertical")
+                            + transform.right
+                            * Input.GetAxis("Horizontal"), 1f) * speed;
 
             // Verifica si el jugador presiona la tecla Espacio para saltar
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.Space))
             {
                 physicalCC.inertiaVelocity.y = 0f; // Resetea la velocidad de inercia vertical
                 physicalCC.inertiaVelocity.y += jumpHeight; // Agrega la altura del salto a la velocidad de inercia vertical
@@ -47,11 +37,6 @@ public class PlayerInput : MonoBehaviour
                 // Inicia la animación de sentarse
                 sitCort = sitDown();
                 StartCoroutine(sitCort);
-            }
-            // Verifica si el jugador presiona el clic derecho para atacar
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                Attack();
             }
         }
     }
@@ -93,19 +78,6 @@ public class PlayerInput : MonoBehaviour
         // Resetea el enumerator de la animación
         sitCort = null;
         yield break;
-    }
-    // Función de ataque
-    void Attack()
-    {
-        // Busca el objeto enemigo
-        Collider[] hitColliders = Physics.OverlapSphere(transform.position, 2f);
-        foreach (var hitCollider in hitColliders)
-        {
-            if (hitCollider.CompareTag("Enemigo"))
-            {
-                animPersonaje.SetTrigger("ataque");
-                Debug.Log("Ataque1");
-            }
-        }
+    
     }
 }
