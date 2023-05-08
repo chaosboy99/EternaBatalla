@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Suelo
   - Enemigo
+  - Light
+  - Bullet
   layers:
   - Default
   - TransparentFX
