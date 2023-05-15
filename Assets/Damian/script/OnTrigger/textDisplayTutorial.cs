@@ -5,27 +5,34 @@ using UnityEngine;
 public class textDisplayTutorial : MonoBehaviour
 {
     public GameObject _UiObject;
+
     // Start is called before the first frame update
     void Start()
     {
+        // Desactiva el objeto de interfaz de usuario al inicio del juego.
         _UiObject.SetActive(false);
     }
 
     // Update is called once per frame
-    void OnTriggerEnter (Collider player)
+    void OnTriggerEnter(Collider player)
     {
-        if(player.gameObject.tag == "Player") 
+        // Verifica si el jugador con etiqueta "Player" ha colisionado con este objeto.
+        if (player.gameObject.tag == "Player")
         {
-            _UiObject.SetActive (true);
+            // Activa el objeto de interfaz de usuario.
+            _UiObject.SetActive(true);
+            // Inicia la funcion de tiempo de espera.
             StartCoroutine("WaitForSec");
         }
     }
+
     IEnumerator WaitForSec()
     {
+        // Genera una pausa de 5 segundos.
         yield return new WaitForSeconds(5);
+        // Desactiva el objeto de interfaz de usuario.
         _UiObject.SetActive(false);
+        // Destruye el objeto creadoo
         Destroy(gameObject);
     }
-
-
 }

@@ -7,81 +7,70 @@ using UnityEngine.SceneManagement;
 
 public class DialogueBañoCap1 : MonoBehaviour
 {
+    public TextMeshProUGUI dialogueText;   // Referencia al componente TextMeshProUGUI para mostrar el diálogo
 
-    public TextMeshProUGUI dialogueText;
+    public GameObject NomPersonatgeEs, NomPersonatgeDret;  // Referencias a los objetos de juego para mostrar los nombres de los personajes
 
-    public GameObject NomPersonatgeEs, NomPersonatgeDret;
+    public string[] lines;  // Arreglo de cadenas que almacena las líneas de diálogo
 
-    public string[] lines;
+    public float vel_texto = 0.1f;  // Velocidad a la que se muestra el texto del diálogo
 
-    public float vel_texto = 0.1f;
-
-    int index;
+    int index;  // Índice para realizar el seguimiento de la línea actual del diálogo
 
     void Start()
     {
-        dialogueText.text = string.Empty;
-        StartDialogue();
+        dialogueText.text = string.Empty;   // Establece el texto del diálogo como vacío
+        StartDialogue();   // Inicia el diálogo
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0))   // Verifica si se ha hecho clic con el botón izquierdo del mouse
         {
-            if (dialogueText.text == lines[index])
+            if (dialogueText.text == lines[index])   // Verifica si se ha mostrado completamente la línea actual del diálogo
             {
-                NextLine();
+                NextLine();   // Avanza a la siguiente línea del diálogo
             }
-
             else
             {
-                StopAllCoroutines();
-                dialogueText.text = lines[index];
+                StopAllCoroutines();   // Detiene todas las corutinas activas (en caso de que existan)
+                dialogueText.text = lines[index];   // Muestra la línea completa de diálogo de inmediato
             }
         }
     }
 
     public void StartDialogue()
     {
-        index = 0;
-
-        StartCoroutine(WriteLine());
+        index = 0;   // Establece el índice en 0 (comienza desde la primera línea del diálogo)
+        StartCoroutine(WriteLine());   // Inicia la corutina para mostrar las líneas del diálogo
     }
-
 
     IEnumerator WriteLine()
     {
-        string[] PersonatgeText = lines[index].Split("/");
+        string[] PersonatgeText = lines[index].Split("/");   // Divide la línea de diálogo en dos partes: personaje y texto
 
         Debug.Log(PersonatgeText[0]);
 
         if ("T" == PersonatgeText[0])
         {
-
-            // Cartell dret
-            NomPersonatgeDret.SetActive(true);
-            NomPersonatgeEs.SetActive(false);
-
+            // Si el personaje es "T" (cartel derecho)
+            NomPersonatgeDret.SetActive(true);   // Activa el objeto de juego del cartel derecho
+            NomPersonatgeEs.SetActive(false);   // Desactiva el objeto de juego del cartel izquierdo
         }
         else if ("C-" == PersonatgeText[0])
         {
-
-            // Cartell Es
-            NomPersonatgeEs.SetActive(true);
-            NomPersonatgeDret.SetActive(false);
-
+            // Si el personaje es "C-" (cartel izquierdo)
+            NomPersonatgeEs.SetActive(true);   // Activa el objeto de juego del cartel izquierdo
+            NomPersonatgeDret.SetActive(false);   // Desactiva el objeto de juego del cartel derecho
         }
         else if ("D" == PersonatgeText[0])
         {
-
-            // Sense Cartells
-            NomPersonatgeDret.SetActive(false);
-            NomPersonatgeEs.SetActive(false);
-
+            // Si el personaje es "D" (sin carteles)
+            NomPersonatgeDret.SetActive(false);   // Desactiva el objeto de juego del cartel derecho
+            NomPersonatgeEs.SetActive(false);   // Desactiva el objeto de juego del cartel izquierdo
         }
 
-        lines[index] = PersonatgeText[1];
+        lines[index] = PersonatgeText[1];   // Actualiza la línea de diálogo sin la etiqueta
 
         foreach (char letter in lines[index].ToCharArray())
         {
