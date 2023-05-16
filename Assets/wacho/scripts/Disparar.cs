@@ -4,35 +4,36 @@ using UnityEngine;
 
 public class Disparar : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public GameObject bullet;    // Prefab del proyectil
+    public Transform spawn;      // Transform de la posición de spawn del proyectil
 
-    public GameObject bullet;
-    public Transform spawn;
+    public float fuerza = 1500;  // Fuerza aplicada al proyectil
+    public float shotRate = 0.5f;    // Tiempo mínimo entre disparos
 
-    public float fuerza = 1500;
-    public float shotRate = 0.5f;
+    private float ShotRateTime = 0;  // Tiempo en el que se puede realizar el siguiente disparo
 
-    private float ShotRateTime = 0;
-
-
-    // Update is called once per frame
+    // Update se llama una vez por frame
     void Update()
     {
+        // Si se presiona el botón de disparo (por defecto, el botón izquierdo del ratón)
         if (Input.GetButtonDown("Fire1"))
         {
-            if (Time.time>ShotRateTime)
+            // Verificar si ha pasado el tiempo mínimo entre disparos
+            if (Time.time > ShotRateTime)
             {
-
+                // Instanciar un nuevo proyectil en la posición y rotación de spawn
                 GameObject NewBullet;
-
                 NewBullet = Instantiate(bullet, spawn.position, spawn.rotation);
-                NewBullet.GetComponent<Rigidbody>().AddForce(spawn.forward*fuerza);
-                ShotRateTime = Time.time + shotRate;
-                Destroy(NewBullet, 2);
 
+                // Aplicar una fuerza al proyectil en la dirección del spawn
+                NewBullet.GetComponent<Rigidbody>().AddForce(spawn.forward * fuerza);
+
+                // Actualizar el tiempo en el que se podrá realizar el siguiente disparo
+                ShotRateTime = Time.time + shotRate;
+
+                // Destruir el proyectil después de 2 segundos
+                Destroy(NewBullet, 2);
             }
         }
-        
     }
-
 }

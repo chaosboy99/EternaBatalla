@@ -7,19 +7,19 @@ using UnityEngine.SceneManagement;
 
 public class DialogueBañoCap1 : MonoBehaviour
 {
-    public TextMeshProUGUI dialogueText;   // Referencia al componente TextMeshProUGUI para mostrar el diálogo
+    public TextMeshProUGUI dialogueText;   //Variable donde se guarda al componente TextMeshProUGUI para mostrar el diálogo
 
-    public GameObject NomPersonatgeEs, NomPersonatgeDret;  // Referencias a los objetos de juego para mostrar los nombres de los personajes
+    public GameObject NomPersonatgeEs, NomPersonatgeDret;  //Variable donde se guardan los nombres de los personajes
 
-    public string[] lines;  // Arreglo de cadenas que almacena las líneas de diálogo
+    public string[] lines;  // Array de líneas de diálogo
 
     public float vel_texto = 0.1f;  // Velocidad a la que se muestra el texto del diálogo
 
-    int index;  // Índice para realizar el seguimiento de la línea actual del diálogo
+    int index;  // Índice donde se guardan las lineas del diálogo 
 
     void Start()
     {
-        dialogueText.text = string.Empty;   // Establece el texto del diálogo como vacío
+        dialogueText.text = string.Empty;   // Aqui es donde Establece el texto del diálogo como vacío
         StartDialogue();   // Inicia el diálogo
     }
 
