@@ -43,7 +43,7 @@ public class MenuFullScreen : MonoBehaviour
 
         for (int i =0; i <  _resolutionMenu.Length; i++)
         {
-            string _optionMenu = _resolutionMenu[i].width + " x " + _resolutionMenu[i].height;
+            string _optionMenu = _resolutionMenu[i].width + " x " + _resolutionMenu[i].height +"@ "+ _resolutionMenu[i].refreshRate + " Hz";
             resolutions.Add(_optionMenu);
 
             if (
