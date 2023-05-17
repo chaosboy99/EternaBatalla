@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 24.434689, g: 75.32623, b: 118.69031, a: 1}
+  m_IndirectSpecularColor: {r: 93.54797, g: 128.49597, b: 148.3241, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5484,6 +5484,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1682112790572381779, guid: 71838a5b2ad19eb43a53a7a51e29f9d9, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -44.482056
+      objectReference: {fileID: 0}
     - target: {fileID: 1682112791108602600, guid: 71838a5b2ad19eb43a53a7a51e29f9d9, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -26138,7 +26142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 984a38800c17f2846b218cbb11a12533, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Escena: 7
+  Escena: 6
 --- !u!65 &2058891131
 BoxCollider:
   m_ObjectHideFlags: 0
