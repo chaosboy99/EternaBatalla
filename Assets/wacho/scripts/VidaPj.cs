@@ -9,6 +9,7 @@ public class VidaPj : MonoBehaviour
     [SerializeField] int VidasPj; // Variable que representa las vidas del personaje
     [SerializeField] Slider VidasPantalla; // Referencia al slider de vidas en la pantalla
 
+
     private void Start()
     {
         VidasPantalla.maxValue = VidasPj; // Establecer el valor máximo del slider como las vidas del personaje

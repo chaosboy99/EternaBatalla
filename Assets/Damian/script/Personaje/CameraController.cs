@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CameraController : MonoBehaviour
 {
@@ -40,9 +41,28 @@ public class CameraController : MonoBehaviour
     // Sensibilidad de rotación de la cámara
     public float sensitivity;
 
+    // Variable para almacenar el estado de la escena
+    private bool isGameOverOrWin;
+
     // Método llamado en cada frame
     void Update()
     {
+        // Verifica si la escena actual es "gameover" o "win"
+        if (SceneManager.GetActiveScene().name == "gameover" || SceneManager.GetActiveScene().name == "win")
+        {
+            // Desactiva el movimiento de la cámara
+            isGameOverOrWin = true;
+            return;
+        }
+        else
+        {
+            // Activa el movimiento de la cámara
+            isGameOverOrWin = false;
+        }
+
+        // Si el movimiento de la cámara está desactivado, no se realiza ninguna acción
+        if (isGameOverOrWin) return;
+
         // Obtiene el valor vertical del movimiento del mouse
         MouseVerticalValue = Input.GetAxis("Mouse Y");
 
