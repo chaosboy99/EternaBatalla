@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 261.9017, g: 324.45706, b: 429.4361, a: 1}
+  m_IndirectSpecularColor: {r: 262.3369, g: 325.0498, b: 430.21924, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -614,7 +614,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 175.731, y: -170.522, z: -135.87799}
 --- !u!114 &705507996
 MonoBehaviour:
@@ -911,20 +911,24 @@ MonoBehaviour:
   lines:
   - "D/Todo inicia cuando llegas a Barcelona debido a que tus padres encontraron
     nuevos trabajos que ayudar\xE1n a mejorar vuestras vidas, pero sin saber que
-    la tuya se perjudicar\xEDa por completo."
+    la tuya se perjudica por completo."
   - "D/Por culpa de la mudanza dejas todo atr\xE1s, la escuela, amigos, familia,
     tu casa de la infancia, todo\u2026                                                                        
-    Ahora toca enfrentarte al miedo e inseguridades de tu nueva vida, nuevo c\xEDrculo
+    Ahora toca enfrentarse al miedo e inseguridades de tu nueva vida, nuevo c\xEDrculo
     social, intentar caer bien a todos, ser aceptado y adaptarte a todo lo nuevo. "
-  - "D/Est\xE1s estudiando cuando tu madre te llama:"
-  - "M/Ya es hora de ir a clases, se te va hacer tarde en tu primer d\xEDa de clase."
+  - "D/La noche anterior de tu primer d\xEDa de clases, te encuentras en el port\xE1til
+    viendo unos videos cuando tu madre entra a la habitaci\xF3n"
+  - "M/Ya es hora de irte a dormir, se te va a hacer tarde y necesitas descansar
+    para ir ma\xF1ana a clases que es t\xFA primer d\xEDa de clases."
   - "T/Ya voy mam\xE1."
-  - 'D/Dejas los libros y bajas a desayunar con tu madre. '
-  - "T/Mam\xE1 estoy nerviosa y tengo miedo de no llevarme bien con mis compa\xF1eros."
-  - "M/Tranquila hija no va a pasar nada, se t\xFA misma y ya ver\xE1s como har\xE1s
-    amigos, eres genial, nuncaq lo dudes cari\xF1o."
+  - "D/Dejas el port\xE1til y te vas a preparar para ir a dormir mientras hablas
+    con tu madre. "
+  - "T/Mam\xE1 estoy nerviosa y tengo miedo de no llevarme bien con mis compa\xF1eros. "
+  - "M/Tranquila cari\xF1o, no va a pasar nada, s\xE9 t\xFA misma y ya ver\xE1s como
+    har\xE1s muchos amigos, eres genial, nunca lo dudes. "
   - "T/Gracias mam\xE1."
-  - 'D/Acabas de comer y te pones en marcha de camino a clases. '
+  - "D/Acabas de prepararte y te metes en la cama, pero te cuesta mucho conciliar
+    el sue\xF1o, porque no puedes parar de pensar en lo que podr\xEDa pasar ma\xF1ana.  "
   vel_texto: 0.1
 --- !u!1 &891908420
 GameObject:
@@ -1153,7 +1157,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1152713078
 GameObject:
@@ -1627,7 +1631,7 @@ RectTransform:
   - {fileID: 217198276}
   - {fileID: 2084665876}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}

@@ -1680,15 +1680,13 @@ MonoBehaviour:
     alguien que dice "mira a la nueva, es un bicho raro!", escuchas otra voz que
     dice entre risas "mira que fea, seguro que la echaron del otro instituto por
     eso".
+  - "P/Bueno, empecemos con la clase de matematicas, abran el libro por la p\xE1gina
+    25."
   - "D/Te sientas e intentas prestar atenci\xF3n a la clase que est\xE1 por empezar,
     pero es imposible con las risas y comntarios de tus nuevas compa\xF1eras que
     no hacen m\xE1s que ponerte nerviosa e intranquila."
-  - "P/Bueno, empecemos con la clase de matematicas, abran el libro por la p\xE1gina
-    25."
-  - "D/Despu\xE9s de 3 horas de clases por fin es la hora del descanco, no puedes
-    parar de pensar en salir ya para sentirte m\xE1s segura."
-  - "D/Coges tu merienda y empiezas a salir de clase, una vez en el patio decides
-    ir un momento al ba\xF1o."
+  - "D/ Por lo que cierras los ojos para calmarte, imagin\xE1ndote de nuevo el mundo
+    fant\xE1stico de anoche para matar esos monstruos."
   vel_texto: 0.1
 --- !u!1 &1972728034
 GameObject:

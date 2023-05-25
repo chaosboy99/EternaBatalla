@@ -506,6 +506,10 @@ MonoBehaviour:
   NomPersonatgeEs: {fileID: 323004465}
   NomPersonatgeDret: {fileID: 1381617359}
   lines:
+  - "D/Despu\xE9s de 3 horas de clases por fin es la hora del descanco, no puedes
+    parar de pensar en salir ya para sentirte m\xE1s segura."
+  - "D/Coges tu merienda y empiezas a salir de clase, una vez en el patio decides
+    ir un momento al ba\xF1o."
   - "D/Cuando entras al ba\xF1o ves a un grupo de chicas hablando, ves un ba\xF1o
     vac\xEDo as\xED que preguntas si alguna va entrar. Entonces todas se giran a
     verte."
@@ -525,6 +529,11 @@ MonoBehaviour:
     metes dentro y cierras con pestillo. Las chicas salen corriendo detr\xE1s tuya."
   - "C/\xA1\xA1\xA1Sal de ah\xED!!! Bueno haz lo que quieras, hasta que no me respondas
     no saldr\xE1s de aqu\xED!"
+  - D/Empiezas a tener un ataque de ansiedad, por lo que te sientas e intentas calmarte
+    mientras te abrazas las piernas, en modo de defensa.
+  - D/Pero es imposible con las risas y las burlas, por lo que cierras los ojos y
+    te vuelves a imaginar ese mundo en el que puedes combatir sin miedo contra esos
+    miedos en forma de monstruos.
   vel_texto: 0.1
 --- !u!1 &546444120
 GameObject:

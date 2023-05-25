@@ -104,7 +104,7 @@ public class DialogueRoomCap1 : MonoBehaviour
         {
             // Si no hay más líneas de diálogo, cargar la siguiente escena
             gameObject.SetActive(false);
-            SceneManager.LoadScene("SceneSchool.Cap1");
+            SceneManager.LoadScene(5);
         }
     }
 }

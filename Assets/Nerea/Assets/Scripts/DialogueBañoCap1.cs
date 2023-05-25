@@ -57,7 +57,7 @@ public class DialogueBañoCap1 : MonoBehaviour
             NomPersonatgeDret.SetActive(true);   // Activa el objeto de juego del cartel derecho
             NomPersonatgeEs.SetActive(false);   // Desactiva el objeto de juego del cartel izquierdo
         }
-        else if ("C-" == PersonatgeText[0])
+        else if ("C" == PersonatgeText[0])
         {
             // Si el personaje es "C-" (cartel izquierdo)
             NomPersonatgeEs.SetActive(true);   // Activa el objeto de juego del cartel izquierdo
@@ -93,7 +93,7 @@ public class DialogueBañoCap1 : MonoBehaviour
         {
             //Aquí se cierra el dialogo, por lo tanto aquí irá relacionado con la siguiente pantalla.
             gameObject.SetActive(false);
-            SceneManager.LoadScene(5);
+            SceneManager.LoadScene(6);
 
         }
     }

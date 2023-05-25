@@ -91,10 +91,9 @@ public class DialogueClassCap1 : MonoBehaviour
         }
         else
         {
-            // Aqui se cierra el dialogo, por lo tanto aquí irá relacionado con la siguiente pantalla.
+            // Si no hay más líneas de diálogo, cargar la siguiente escena
             gameObject.SetActive(false);
-            SceneManager.LoadScene("SceneBaño.Cap1");
-
+            SceneManager.LoadScene(6);
         }
     }
 

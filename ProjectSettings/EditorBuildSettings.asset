@@ -30,6 +30,12 @@ EditorBuildSettings:
     path: Assets/wacho/escenas/Mapa1.unity
     guid: 60a73fef697e49248bba3e6a142ef6e4
   - enabled: 1
+    path: Assets/wacho/escenas/Mapa3.unity
+    guid: 2b935dd2abc13fe48b0248b4323ae3f8
+  - enabled: 1
+    path: Assets/wacho/escenas/Mapa4.unity
+    guid: 000b528396305b44c91d87013aa04ab3
+  - enabled: 1
     path: Assets/wacho/escenas/GameOver.unity
     guid: 8ba7eb4a7bb364345adc775caa15b1ab
   - enabled: 1
